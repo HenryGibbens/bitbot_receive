@@ -6,10 +6,6 @@ input.onGesture(Gesture.TiltLeft, function () {
     basic.showArrow(ArrowNames.West)
     radio.sendString("let")
 })
-input.onGesture(Gesture.ScreenDown, function () {
-    basic.showArrow(ArrowNames.SouthWest)
-    radio.sendString("stop")
-})
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
 })
@@ -24,5 +20,9 @@ input.onGesture(Gesture.Shake, function () {
 input.onGesture(Gesture.TiltRight, function () {
     radio.sendString("right")
     basic.showArrow(ArrowNames.East)
+})
+input.onGesture(Gesture.LogoDown, function () {
+    basic.showArrow(ArrowNames.SouthWest)
+    radio.sendString("stop")
 })
 radio.setGroup(123)
