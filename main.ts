@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("start")
+    radio.sendString("forklift up")
 })
 input.onGesture(Gesture.LogoUp, function () {
     basic.showArrow(ArrowNames.North)
@@ -9,11 +9,17 @@ input.onGesture(Gesture.TiltLeft, function () {
     basic.showArrow(ArrowNames.West)
     radio.sendString("let")
 })
+input.onGesture(Gesture.ScreenDown, function () {
+    radio.sendString("stop")
+})
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("stop")
+    radio.sendString("forklift down")
+})
+input.onGesture(Gesture.Shake, function () {
+    radio.sendString("start")
 })
 input.onGesture(Gesture.TiltRight, function () {
     radio.sendString("right")
