@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "bitbot fork lift extension": "github:henrygibbens/bitbot-fork-lift-extension#master"
     },
     "files": [
         "main.blocks",

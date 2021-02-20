@@ -1,5 +1,9 @@
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("Start")
+    radio.sendString("start")
+})
+input.onGesture(Gesture.TiltLeft, function () {
+    basic.showArrow(ArrowNames.East)
+    radio.sendString("let")
 })
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
@@ -7,7 +11,8 @@ radio.onReceivedString(function (receivedString) {
 input.onButtonPressed(Button.B, function () {
     radio.sendString("stop")
 })
-radio.setGroup(123)
-basic.forever(function () {
-	
+input.onGesture(Gesture.TiltRight, function () {
+    radio.sendString("Right")
+    basic.showArrow(ArrowNames.West)
 })
+radio.setGroup(123)
