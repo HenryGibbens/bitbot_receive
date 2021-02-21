@@ -3,34 +3,30 @@ input.onButtonPressed(Button.A, function () {
     basic.showArrow(ArrowNames.SouthEast)
 })
 input.onGesture(Gesture.LogoUp, function () {
-    basic.showArrow(ArrowNames.North)
-    radio.sendString("start")
+    basic.showArrow(ArrowNames.South)
+    radio.sendString("back")
 })
 input.onGesture(Gesture.TiltLeft, function () {
     basic.showArrow(ArrowNames.West)
     radio.sendString("let")
 })
-input.onGesture(Gesture.ScreenUp, function () {
-    basic.showIcon(IconNames.No)
-    radio.sendString("stop")
-})
 input.onButtonPressed(Button.AB, function () {
-    basic.showIcon(IconNames.Ghost)
-    radio.sendString("forklift stop")
+    basic.showIcon(IconNames.House)
+    radio.sendString("fast")
 })
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showArrow(ArrowNames.NorthEast)
-    radio.sendString("forklift down")
+    basic.showIcon(IconNames.No)
+    radio.sendString("stop")
 })
 input.onGesture(Gesture.TiltRight, function () {
     radio.sendString("right")
     basic.showArrow(ArrowNames.East)
 })
 input.onGesture(Gesture.LogoDown, function () {
-    basic.showArrow(ArrowNames.South)
-    radio.sendString("back")
+    basic.showArrow(ArrowNames.North)
+    radio.sendString("start")
 })
 radio.setGroup(123)
